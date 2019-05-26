@@ -155,12 +155,12 @@ public class VideoRecyclerviewAdapter extends RecyclerView.Adapter<VideoRecycler
             mController.setLenght(98000);
             Glide.with(itemView.getContext())
                     .load("https://i.vimeocdn.com/video/"+video.getPicture_id()+"_295x166")
-                    .placeholder(R.mipmap.ic_launcher)
+//                    .placeholder(R.mipmap.ic_launcher)
                     .crossFade()
                     .centerCrop()
                     .into(mController.imageView());
-//            mVideoPlayer.setUp(video.getVideos().getSmall().getUrl(), null);
-            mVideoPlayer.setUp("https://bmob-cdn-13634.bmobcloud.com/2019/05/21/429fc31140a44fe6800cc7dacd3fa944.mp4", null);
+            mVideoPlayer.setUp(video.getVideos().getSmall().getUrl(), null);
+//            mVideoPlayer.setUp("https://bmob-cdn-13634.bmobcloud.com/2019/05/26/b86db86e407797f080fffcc3342dca0a.mp4", null);
 
         }
     }

@@ -106,7 +106,7 @@ public class VideoFragment extends Fragment {
                 switch (newState){
                     case RecyclerView.SCROLL_STATE_IDLE:
 //                        recyclerView.;
-                        Toast.makeText(getContext(),"滑到这里了",Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getContext(),"滑到这里了",Toast.LENGTH_SHORT).show();
                         break;
                     default:
                         break;
@@ -163,6 +163,10 @@ public class VideoFragment extends Fragment {
                     @Override
                     public void onNext(VideoRequestInfo videoRequestInfo) {
                         Log.i(TAG,videoRequestInfo.getHits().size()+"");
+                        videoRequestInfo.getHits().get(0).getVideos().getSmall().setUrl("https://bmob-cdn-13634.bmobcloud.com/2019/05/26/f0d5b300406766ae80ae629120ef46b8.mp4");
+                        videoRequestInfo.getHits().get(1).getVideos().getSmall().setUrl("https://bmob-cdn-13634.bmobcloud.com/2019/05/26/b86db86e407797f080fffcc3342dca0a.mp4");
+                        videoRequestInfo.getHits().get(2).getVideos().getSmall().setUrl("https://bmob-cdn-13634.bmobcloud.com/2019/05/26/244470fd40c4766d8044d8b93354ed06.mp4");
+
                         videoInfos.addAll(videoRequestInfo.getHits());
                         Log.i(TAG,videoInfos.size()+"");
                         for(VideoInfo videoInfo : videoInfos){
